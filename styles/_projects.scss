@@ -10,7 +10,7 @@ full height of the viewport.
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  box-sizing: border-box;
 }
 
 :root {
@@ -94,10 +94,15 @@ body {
 
 .navbar {
   overflow: hidden;
+  position: fixed;
+  display: flex;
   background-color: #333;
   z-index: 1000;
   height: var(--navbar-height);
   top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
   align-items: center; /* Align the navbar items vertically */  
 }
 
@@ -158,4 +163,30 @@ body {
     margin-bottom: 0;
     height: calc(100vh - var(--navbar-height));
   }
+}
+
+.full-viewport {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.home {
+  background: #1e1e2f;
+  color: #f3f3f3;
+}
+
+.contact {
+  background: #f3f3f3;
+  color: #1e1e2f;
+}
+
+.social-links a {
+  margin: 0 1rem;
+  color: #333;
+  text-decoration: none;
 }
