@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="dist/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <a href="#home" class="active-nav">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html">R&eacute;sum&eacute; TODO</a>
+        <a href="#contact">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </nav>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+
+  <section id="home" class="section home">
+    <h1>Welcome to My Portfolio</h1>
+    <h2>I'm a Frontend Engineer</h2>
+  </section>
+
+  <section id="case-study-1" class="section case-study-1">
+    <article>
+      <h2>Featured Case Study</h2>
+      <p>Project description...</p>
+      <a href="#">View Project</a>
+    </article>
+  </section>
+
+  <section class="case-studies-container" id="case-studies-container">
+      <!-- Case studies will be inserted here -->
+  </section>
+
+  <section id="contact" class="section contact">
+    <h1>Contact Me</h1>
+    <h2>Let's get in touch!</h2>
+    <div class="social-links">
+      <a href="#">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="#">Twitter</a>
+    </div>
+  </section>
+
+  <template id="case-study-template">
+    <article class="case-study">
+      <header class="case-study-header">
+        <div class="case-study-left">
+          <p class="case-study-number"></p>
+          <p class="case-study-tags"></p>
+        </div>
+        <div class="case-study-center">
+          <h2 class="case-study-title"></h2>
+        </div>
+        <div class="case-study-right">
+          <p class="case-study-timeframe"></p>
+          <p class="case-study-summary"></p>
+        </div>
+      </header>
+      <hr class="case-study-line">
+      <section class="case-study-main">
+        <img class="case-study-image" src="" alt="">
+      </section>
+      <hr class="case-study-line">
+    </article>
+  </template>
+
+  <script src="dist/main.js"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+</body>
+</html>
