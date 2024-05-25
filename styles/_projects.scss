@@ -17,26 +17,35 @@ html, body {
   --navbar-height: 60px; /* Adjust this value if your navbar height changes */
 }
 
+/* This ensures that the body takes up the full height of the viewport
+https://stackoverflow.com/questions/10336194/top-nav-bar-blocking-top-content-of-the-page/11008050#11008050
+*/
+body {
+  padding-top: 60px;
+}
+@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}
+
 body {
   font-family: 'SpaceMono Nerd Font', sans-serif;
-  margin: 0;
 }
 
-.projects {
-  background: #1e1e2f;
-  color: #f3f3f3;
+.full-viewport {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.case-study-1 {
-  background: #f3f3f3;
-  color: #1e1e2f;
-  display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 2rem;
+}
+
+.home {
+  background: #1e1e2f;
+  color: #f3f3f3;
 }
 
 .case-studies-container {
@@ -50,25 +59,41 @@ body {
   background: #1e1e2f;
   color: #f3f3f3;
   width: 100%;
-  padding-bottom: 4rem;
-// This ensures that the case study takes up the full
-// height of the viewport
-  height: calc(100vh - var(--navbar-height));
-  margin: 0;
-  overflow: hidden;
 }
 
 .case-study-header {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
 }
 
-.case-study-right,
-.case-study-left,
-.case-study-center {
+.case-study-metadata {
   text-align: left;
 }
+
+.case-study-data {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.case-study-title.h2 {
+  font-size: 40vw;
+  margin: 0;
+}
+
+.case-study-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
 
 .case-study-line {
   border: none;
@@ -126,7 +151,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 979px) {
   .navbar a:not(:first-child) {
     display: none;
   }
@@ -156,28 +181,26 @@ body {
 
   .case-study {
     width: 100%;
+    padding: 40px;
     margin-bottom: 0;
-    height: calc(100vh - var(--navbar-height));
+  }
+
+  .case-study-header {
+    text-align: justify;
+    text-align-last: left;
+    padding-left: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .case-study-data {
+    flex-direction: column;
   }
 
   .case-study-image {
     max-width: 100%;
   }
-}
-
-.full-viewport {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-}
-
-.home {
-  background: #1e1e2f;
-  color: #f3f3f3;
 }
 
 .contact {

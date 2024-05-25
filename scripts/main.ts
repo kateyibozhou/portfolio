@@ -16,12 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       title: 'Boosting User Renewal Rate at ExpressVPN',
       year: '2015-2019',
-      tags: 'A few tags, here, and there. Or summary',
+      tags: 'A few tags, here, and there. Or summary. A few tags, here, and there. Or summary. ',
       preview_image: {
         path: './images/dash.png',
         alt_text: 'some text'
       },
-      summary: 'TODO: A wonderful wonderful summary'
+      summary: 'TODO: A wonderful wonderful summaryA few tags, here, and there. Or summary. '
     },
     {
       title: 'Case Study 2',
