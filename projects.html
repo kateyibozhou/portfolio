@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="dist/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
   <script src="dist/nav.js" defer></script>
   <style>
     html {
@@ -21,24 +22,20 @@
     <h1>A collection of works</h1>
     <h1>made with <em>love &amp; fury</em></h1>
     <nav class="tabs-container">
-      <a href="#navbar" class="tab">Home</a>
+      <a href="index.html" class="tab">Home</a>
       <a href="projects.html" class="tab">Projects</a>
       <a href="#TODO" class="tab">R&eacute;sum&eacute; TODO</a>
       <a href="#contact" class="tab">Contact</a>
     </nav>
   </header>
 
-  <section id="home" class="full-viewport home">
-    <h1>Welcome to My Portfolio</h1>
-    <h2>I'm a Frontend Engineer</h2>
-  </section>
-
   <section class="case-studies-container" id="case-studies-container">
       <!-- Case studies will be inserted here -->
   </section>
 
   <section id="contact" class="full-viewport contact">
-    <h1>Let's collaborate!</h1>
+    <h1>Contact Me</h1>
+    <h2>Let's get in touch!</h2>
     <div class="social-links">
       <a href="#">LinkedIn</a>
       <a href="#">GitHub</a>
@@ -69,5 +66,15 @@
   </template>
 
   <script src="dist/main.js"></script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 </body>
 </html>
