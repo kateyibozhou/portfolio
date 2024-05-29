@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       summary: 'Global renewal revenue increased by 83%'
     },
     {
-      title: 'The Development Bank of Singapore (DBS) Information Architecture',
+      title: 'Development Bank of Singapore Information Architecture',
       local_path: './posts/product-design-ux/dbs-info-arch.html',
       year: '2022',
       tags: 'Product Design, UX Design',
