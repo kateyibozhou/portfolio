@@ -39,10 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const template = document.getElementById('case-study-template');
     caseStudies.forEach((study, index) => {
         const clone = document.importNode(template.content, true);
-        clone.querySelector('.case-study-number').textContent = `${index + 1}/${caseStudies.length}`;
+        // Uncomment the following line to show the case study number
+        // (clone.querySelector('.case-study-number') as HTMLElement).textContent = `${index + 1}/${caseStudies.length}`;
         clone.querySelector('.case-study-title').textContent = study.title;
         clone.querySelector('.case-study-year').textContent = study.year;
-        clone.querySelector('.case-study-tags').textContent = study.tags;
+        // (clone.querySelector('.case-study-tags') as HTMLElement).textContent = study.tags;
         clone.querySelector('.case-study-summary').textContent = study.summary;
         clone.querySelector('.case-study-image').src = study.preview_image.path;
         clone.querySelector('.case-study-image').alt = study.preview_image.alt_text;
