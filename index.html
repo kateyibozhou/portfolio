@@ -6,6 +6,7 @@
   <title>Yibo Zhou's Portfolio</title>
   <link rel="icon" type="image/x-icon" href="assets/site/favicon.png">
   <link rel="stylesheet" href="dist/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -18,7 +19,8 @@
 </head>
 <body>
 
-  <header id="navbar">
+  <header id="navbar" data-aos="fade-up"
+  data-aos-anchor-placement="center center">
     <h2>Yibo Zhou's collection of works</h2>
     <h1>made with <em>love &amp; fury</em></h1>
     <h3>Hi! I&apos;m a Product designer specializing in
@@ -36,12 +38,13 @@
       <!-- Case studies will be inserted here -->
   </section>
 
-  <section id="about" class="full-viewport">
+  <section id="about" class="full-viewport" data-aos="zoom-in">
     <em>Add something for emphasis</em>
     <a href="projects.html" class="button">More projects</a>
   </section>
 
-  <section id="contact" class="full-viewport contact">
+  <section id="contact" class="full-viewport contact"
+  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
     <h1>Let's collaborate!</h1>
     <div class="social-links">
       <a href="#">LinkedIn</a>
@@ -51,7 +54,7 @@
   </section>
 
   <template id="case-study-template">
-    <article class="case-study full-viewport">
+    <article class="case-study full-viewport" data-aos="fade-up">
       <header class="case-study-header">
           <p class="case-study-year"></p>
           <a class="case-study-link" href="#">
@@ -62,12 +65,16 @@
       </header>
       <figure class="case-study-main">
         <a href="" class="case-study-link">
-          <img class="case-study-image" src="" alt="">
+          <img class="case-study-image" src="" alt="" data-aos="fade-in">
         </a>
       </figure>
     </article>
   </template>
 
   <script src="dist/main.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

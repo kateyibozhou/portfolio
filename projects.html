@@ -6,7 +6,7 @@
   <title>Projects - Yibo Zhou's Portfolio</title>
   <link rel="icon" type="image/x-icon" href="assets/site/favicon.png">
   <link rel="stylesheet" href="dist/styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -19,7 +19,8 @@
 </head>
 <body>
 
-  <header id="navbar">
+  <header id="navbar" data-aos="fade-up"
+  data-aos-anchor-placement="center center">
     <h1>A collection of works</h1>
     <h1>made with <em>love &amp; fury</em></h1>
     <nav class="tabs-container">
@@ -35,7 +36,8 @@
       <!-- Case studies will be inserted here -->
   </section>
 
-  <section id="contact" class="full-viewport contact">
+  <section id="contact" class="full-viewport contact"
+  data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
     <h1>Let's collaborate!</h1>
     <div class="social-links">
       <a href="#">LinkedIn</a>
@@ -45,7 +47,7 @@
   </section>
 
   <template id="case-study-template">
-    <article class="case-study full-viewport">
+    <article class="case-study full-viewport" data-aos="fade-up">
       <header class="case-study-header">
           <p class="case-study-year"></p>
           <a class="case-study-link" href="#">
@@ -62,5 +64,9 @@
   </template>
 
   <script src="dist/projects.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
