@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",             // Or "ES2015" or later
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "lib": ["ES6", "DOM"]       // Ensure ES6 and DOM libraries are included
+  },
+  "include": ["scripts/**/*.ts"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="../../dist/tufte.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="navbar">
+    <nav class="tabs-container">
+      <a href="#navbar" class="tab">Home</a>
+      <a href="../../projects.html" class="tab">Projects</a>
+      <a href="#TODO" class="tab">R&eacute;sum&eacute; TODO</a>
+      <a href="../../index.html#contact" class="tab">Contact</a>
+    </nav>
+  </header>
+
+  <article>
+
+    <h1>Increase user renewal rate for ExpressVPN</h1>
+    <p class"subtitle">Design Lead, User Researcher</p>
+
+    <section>
+        <h2>Objective</h2>
+        <p>Conduct A/B experiment on new renewal messages to increase renewal rate on Edit Subscription page.</p>
+    </section>
+
+    <section>
+        <h2>What I did</h2>
+        <ul>
+            <li>Worked in a squad consisting of Growth Marketers, UX researchers, Content strategists, Engineers, Data analysts.</li>
+            <li>Triangulate multiple points of data and proactively advised stakeholders on the best page for experiment.</li>
+            <li>Redesigned the renewal banner on desktop web and mobile web pages accounting for 4 renewal scenarios.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Impact</h2>
+
+        <ul>
+            <li>Design increased renewal revenue by 83%.</li>
+            <li>This research identified the Edit Subscription page as the optimal location for the experiment. This data-driven approach helped focus the team's efforts and resources on the most impactful area.</li>
+            <li>Variant design generated +127k after 7 days of experiment compared to control design (69k).</li>
+            <li>Design is shipped globally.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Insights/Constraints 1</h2>
+        <p>Growth marketers want to design on the Edit Subscription page, but it is too low down the funnel to create much impact on user behavior.</p>
+
+    </section>
+
+    <section>
+        <h2>Solution 1</h2>
+        <p>Triangulating multiple data points (from Google Analytics, Customer Journey Map screen flows and VOTC research), I convinced them to conduct the experimentation on Dashboard because of higher volumes of traffic.</p>
+        <p>Looked at screen flows to determine location in the sale funnel.</p>
+        <p>Looked at GA data to determine traffic volume of each of the page types. GA showed that Dashboard has 35k user traffic vs 11.7k user traffic on My Subscription page vs 5k user traffic on Edit Subscription settings. Traffic will only go down as pages move towards bottom of the funnel.</p>
+        <p>Looked at how users flow into websites from external sources (renewal emails) to determine what content users have been exposed to, in order to formulate optimal renewal message.</p>
+    </section>
+
+    <blockquote>
+        <p>One of the tasks was to map out renewal email to website entry points to understand user flow:</p>
+        <p>Although majority of users land on Dashboard through Organic sources, I believe that majority of users are influenced by email campaigns but do not click through the email CTA into Dashboard.</p>
+        <p>Users check their emails during their daily commute but will do in-depth research and purchase on their desktop/laptop, hence this behaviour may be detected as organic traffic.</p>
+    </blockquote>
+
+    <p>These data points helped me convince stakeholders to hold the A/B experiment on the Dashboard and My Subscription pages instead of Edit Subscription page.</p>
+
+    <section>
+        <h2>Insights/Constraints 2</h2>
+        <p>Users want the peace of mind of making payments and that their VPN access will continue</p>
+        <p>Multiple reminders help users decide on renewal and anticipate payment charges</p>
+    </section>
+
+    <section>
+        <h2>Solution 2</h2>
+        <p>To solve the pain point of sending multiple reminders to users, I add a “Set a Reminder” as a secondary CTA so user can download an iCal reminder to remind themselves to renew closer to deadline.</p>
+        <p>But this takes too much Dev effort for this experiment and idea was killed.</p>
+        <p>I pivoted and proposed a new design:</p>
+        <ul>
+            <li>Fun, animated visuals make the banner stand out on the page, creating not just a sense of urgency but memorability.</li>
+            <li>Provide compelling reasons for renewal by surfacing top USPs for users (these USPs are based on top customer service inquiries).</li>
+            <li>Primary CTA button leads straight to Edit Subscription page (Order page) to minimise user drop off.</li>
+        </ul>
+        <p>I created 4 types of renewal reminder banners for:</p>
+        <ol>
+            <li>T-45 days</li>
+            <li>T-72 hours</li>
+            <li>Expired users, but within grace period</li>
+            <li>Expired users</li>
+        </ol>
+
+        <p>I fundamentally believe that good design should deliver business value. Hence, this design increased renewal revenue by 83% ,+127k vs 69k on control design.</p>
+    </section>
+
+    <section>
+        <h2>Learnings</h2>
+        <ul>
+            <li>This experiment performed better than expected. We concluded it after 7 days because it achieved significance at 95% at p-value <0.0001.</li>
+            <li>What contributed to its win can be summed up below:</li>
+            <ul>
+                <li>Don’t take each project brief at face value, instead, question the brief and back my assumptions with concrete data points.</li>
+                <li>Have a deep understanding of how users behave in their user journey through constant conversations with various stakeholders outside your teams. I regularly set up 1:1 with adjacent teams to understand how their part of the business works in order to builder a wider ecosystems view.</li>
+                <li>Having an ecosystems view combined with knowing what metrics to shift, will result in asking the right questions. Asking the right questions will ensure my design delivers the maximum business impact.</li>
+            </ul>
+            <li>What helped me immensely in this project is having a web customer journey map, which houses all the screens, including email and app entry points into the website, as well as user behaviour across the sales funnel.</li>
+        </ul>
+    </section>
+
+  </article>
+</body>
+</html>
