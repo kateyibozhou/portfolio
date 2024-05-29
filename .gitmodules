@@ -1,0 +1,3 @@
+[submodule "dist/et-book"]
+	path = dist/et-book
+	url = https://github.com/edwardtufte/tufte-css
