@@ -4,7 +4,7 @@
 @font-face {
   font-family: "et-book";
   src: url("et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
-  src: url("et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+  src: url("et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
 @font-face {
   font-family: "et-book";
   src: url("et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
-  src: url("et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+  src: url("et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -20,7 +20,7 @@
 @font-face {
   font-family: "et-book";
   src: url("et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
-  src: url("et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+  src: url("et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -28,7 +28,7 @@
 @font-face {
   font-family: "et-book-roman-old-style";
   src: url("et-book/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
-  src: url("et-book/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
+  src: url("et-book/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("et-book/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("et-book/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -51,7 +51,6 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-inline: 20px;
   position: relative;
   text-align: center;
   z-index: 1000;
@@ -167,6 +166,8 @@ h2 {
 }
 
 .case-study-summary {
+  align-self: start;
+  justify-self: start;
   grid-row-start: 1;
   grid-column: 3;
   font-size: 1.5rem;
@@ -181,10 +182,6 @@ h2 {
   grid-row-start: 1;
   grid-column: 2;
   text-decoration: none;
-}
-
-.case-study-title h2 {
-  font-size: 40vw;
 }
 
 .case-study-main {
@@ -218,28 +215,37 @@ h2 {
   cursor: pointer;
 }
 
-@media screen and (max-width: 979px) {
-  .case-studies-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .case-study {
+@media screen and (max-width: 768px) {
+  .case-study-header {
+    display: grid;
+    text-align: left;
+    grid-template-columns: 1fr;
     width: 100%;
-    padding: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-bottom: 0;
   }
-  .case-study-header {
-    text-align: justify;
-    text-align-last: left;
-    padding-left: 40px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
+  .case-study-year {
+    grid-row-start: 1;
+    grid-column: 1;
   }
-  .case-study-data {
-    flex-direction: column;
+  .case-study-link {
+    grid-row-start: 2;
+    grid-column: 1;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+  }
+  .case-study-link > h2 {
+    font-size: 3rem;
+  }
+  .case-study-summary {
+    font-size: 1rem;
+    grid-row-start: 3;
+    grid-column: 1;
   }
   .case-study-image {
+    width: 100%;
     max-width: 100%;
   }
 }
