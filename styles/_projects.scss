@@ -1,8 +1,15 @@
 /* _projects.scss */
 :root {
   --navbar-height: 60px; /* Adjust this value if your navbar height changes */
-  --case-study-dark-color: #1e1e2f;
-  --case-study-light-color: #f3f3f3;  
+  --dark-grey: #333333;
+  --medium-grey: #636363;
+  --light-grey: #eeeeee;
+  --ash: #f4f4f4;
+  --primary-color: #2b72fb;
+  --white: white;
+  --border: 1px solid var(--light-grey);
+  --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   --button-color: #04AA6D;
 }
 
@@ -28,11 +35,11 @@ body {
 }
 
 h1, h2 {
-  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-family: 'Playfair Display', Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -64,8 +71,8 @@ h2 {
 }
 
 .case-study {
-  background: var(--case-study-dark-color);
-  color: var(--case-study-light-color);
+  background: var(--white);
+  color: var(--dark-grey);
   width: 100%;
 }
 
@@ -80,7 +87,7 @@ h2 {
   grid-row: 1;
   grid-column: 1;
   font-size: 1.5rem;
-  border-top: 1px solid var(--case-study-light-color);
+  border-top: 1px solid var(--dark-grey);
   padding-top: 20px;
   margin-right: 20px;
 }
@@ -125,20 +132,30 @@ h2 {
 
 .case-study-image:hover {
   transform: scale(0.98);
-  box-shadow: 20px 20px 20px maroon;
+  box-shadow: 20px 20px 20px var(--light-grey);
+}
+
+.btn {
+  display: block;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 0.6rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  margin: 20px 20px;
 }
 
 .button {
   background-color: var(--button-color);
-  color: var(--case-study-dark-color);
+  color: var(--dark-grey);
   border: none;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 20px 20px;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {

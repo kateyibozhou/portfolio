@@ -7,10 +7,10 @@
   <title>Yibo Zhou's Portfolio</title>
   <link rel="icon" type="image/x-icon" href="assets/site/favicon.png">
   <link rel="stylesheet" href="dist/styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
   <script src="dist/nav.js" defer></script>
   <style>
     html {
@@ -20,28 +20,71 @@
 </head>
 <body>
 
-  <header id="navbar" data-aos="fade-up"
-  data-aos-anchor-placement="center center">
-    <h2>Yibo Zhou's collection of works</h2>
-    <h1>made with <em>love &amp; fury</em></h1>
-    <h3>Hi! I&apos;m a Product designer specializing in
-      Service Design and UX Design.</h3>
-    <nav class="tabs-container">
-      <a href="#navbar" class="tab">Home</a>
-      <a href="projects.html" class="tab">Projects</a>
-      <a href="#about" class="tab">About</a>
-      <a href="./assets/pdfs/resume-may-2024.pdf" class="tab">R&eacute;sum&eacute;</a>
-      <a href="#contact" class="tab">Contact</a>
-    </nav>
+  <header id="nav-menu" aria-label="navigation bar">
+    <div class="container">
+      <div class="nav-start">
+        <a class="logo" href="index.html"> Home
+        </a>
+        <nav class="menu">
+          <ul class="menu-bar">
+            <li>
+              <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                Projects
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div id="dropdown2" class="dropdown">
+                <ul role="menu">
+                  <li>
+                    <span class="dropdown-link-title">Browse Categories</span>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="product-ux.html">Product &amp; UX Design</a>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="service.html">Service Design</a>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="branding.html">Branding &amp; Packaging</a>
+                  </li>
+                </ul>
+                <ul role="menu">
+                  <li>
+                    <span class="dropdown-link-title">Browse Everything&excl;</span>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="branding.html">Take me there&excl;</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="assets/pdfs/resume-may-2024.pdf">R&eacute;sum&eacute;</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+      <div class="nav-end">
+        <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="4" width="24" height="2" fill="currentColor"/>
+            <rect y="11" width="24" height="2" fill="currentColor"/>
+            <rect y="18" width="24" height="2" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </div>
   </header>
-
+  
   <section class="case-studies-container" id="case-studies-container">
       <!-- Case studies will be inserted here -->
   </section>
 
   <section id="about" class="full-viewport" data-aos="zoom-in">
     <em>Add something for emphasis</em>
-    <a href="projects.html" class="button">More projects</a>
+    <a href="projects.html" class="btn">More projects</a>
   </section>
 
   <section id="contact" class="full-viewport contact"
@@ -73,7 +116,7 @@
   </template>
 
   <script src="dist/main.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
   <script>
     AOS.init();
   </script>
