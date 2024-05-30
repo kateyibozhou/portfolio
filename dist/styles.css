@@ -43,6 +43,9 @@ html, body {
 
 :root {
   --navbar-height: 60px; /* Adjust this value if your navbar height changes */
+  --navbar-background: #121922;
+  --navbar-text-color: #e8e8e8;
+  --navbar-hover-color: dodgerblue;
 }
 
 #navbar {
@@ -62,7 +65,7 @@ html, body {
   display: flex;
   width: 100%;
   height: 70px;
-  background-color: #121922;
+  background-color: var(--navbar-background);
   box-shadow: 0 0 20px rgba(111, 111, 111, 0.2);
 }
 
@@ -73,7 +76,7 @@ html, body {
 
 .tabs-container a {
   text-decoration: none;
-  color: #e8e8e8;
+  color: var(--navbar-text-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +87,7 @@ html, body {
 
 .tabs-container a:hover {
   transform: translateY(-5px);
-  background-color: dodgerblue;
+  background-color: var(--navbar-hover-color);
 }
 
 /* _projects.scss */
@@ -95,16 +98,25 @@ html, body {
   --button-color: #04AA6D;
 }
 
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 /* This ensures that the body takes up the full height of the viewport
 https://stackoverflow.com/questions/10336194/top-nav-bar-blocking-top-content-of-the-page/11008050#11008050
 */
 body {
   padding-top: 60px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 @media (max-width: 979px) {
   body {
     padding-top: 0px;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 }
 h1, h2 {
