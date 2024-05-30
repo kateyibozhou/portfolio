@@ -6,15 +6,24 @@
   --button-color: #04AA6D;
 }
 
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 /* This ensures that the body takes up the full height of the viewport
 https://stackoverflow.com/questions/10336194/top-nav-bar-blocking-top-content-of-the-page/11008050#11008050
 */
 body {
   padding-top: 60px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 @media (max-width: 979px) {
   body {
     padding-top: 0px;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 }
 
