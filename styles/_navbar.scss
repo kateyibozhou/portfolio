@@ -2,8 +2,6 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #1e1e2f;
-  color: #f3f3f3;
 }
 
 :root {
@@ -21,7 +19,7 @@ html, body {
 
 body {
   font-family: inherit;
-  background-color: var(--white);
+  background-color: var(--light-grey);
   color: var(--dark-grey);
   letter-spacing: -0.4px;
 }
@@ -67,7 +65,7 @@ button {
 
 .menu {
   position: relative;
-  background: var(--white);
+  background: var(--light-grey);
 }
 
 .menu-bar li:first-child .dropdown {
@@ -114,7 +112,7 @@ button {
   display: flex;
   flex-direction: column;
   min-width: 230px;
-  background-color: var(--white);
+  background-color: var(--light-grey);
   border-radius: 10px;
   position: absolute;
   top: 36px;
