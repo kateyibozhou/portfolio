@@ -10,6 +10,7 @@ interface CaseStudy {
   tags: string;
   preview_image: image;
   summary: string;
+  full_viewport: boolean;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         path: './images/dash.png',
         alt_text: 'User renewal banner page: before and after.'
       },
-      summary: 'Global renewal revenue increased by 83%'
+      summary: 'Global renewal revenue increased by 83%',
+      full_viewport: true
     },
     {
       title: 'Development Bank of Singapore Information Architecture',
@@ -34,7 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
         path: './images/dash.png',
         alt_text: 'Full page view of The Development Bank of Singapore (DBS) website.'
       },
-      summary: 'Spearheaded the development of a user-centric Information Architecture for Treasury & Markets content, resulting in significant improvements in user engagement, navigation efficiency, and new business opportunities'
+      summary: 'Spearheaded the development of a user-centric Information Architecture for Treasury & Markets content, resulting in significant improvements in user engagement, navigation efficiency, and new business opportunities',
+      full_viewport: false
     },
     {
       title: 'Phillips B2B GTM Launch design for TH and ANZ markets',
@@ -45,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
         path: './images/dash.png',
         alt_text: 'A sample launch campaign delivery asset.'
       },
-      summary: 'Delivered localised digital and physical campaign assets for both markets.'
+      summary: 'Delivered localised digital and physical campaign assets for both markets.',
+      full_viewport: false
     },
   ];
 
@@ -54,6 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   caseStudies.forEach((study, index) => {
     const clone = document.importNode(template.content, true);
+    // All case studies are wrapped in an article element with class 'case-study-view'
+    // Each case-study-view has either one case study occupying the full viewport or two case studies side by side
+    const caseStudyView = clone.querySelector('.case-study-view') as HTMLElement;
     // Uncomment the following line to show the case study number
     // (clone.querySelector('.case-study-number') as HTMLElement).textContent = `${index + 1}/${caseStudies.length}`;
     (clone.querySelector('.case-study-title') as HTMLElement).textContent = study.title;
@@ -68,6 +75,38 @@ document.addEventListener('DOMContentLoaded', () => {
       link.href = study.local_path;
     });
 
-    container.appendChild(clone);
+    // for case studies with full viewport, add the class 'full-viewport' to the case study
+    if (study.full_viewport) {
+      caseStudyView.classList.add('full-viewport');
+      container.appendChild(clone);
+    } else {
+      // this this case-study-view will either start a new half-viewport (on the left side)
+      // or be added to the existing half-viewport on the right side
+      // if the last child of the container is a half-viewport, add this case study to the right side
+      // How do we detect that? We can check if the last grid has only one child
+      // How do we access the last grid? check for class case-study-grid and its child count
+      if ( container.lastElementChild?.classList.contains('case-study-grid') && container.lastElementChild.childElementCount === 1) {
+        // add this case study to the right side
+        // add half-viewport class to the case-study-view
+        caseStudyView.classList.add('half-viewport');
+        container.lastElementChild.appendChild(clone);
+
+      } else
+      // Create a div with class 'case-study-grid' to wrap the two case studies
+        // Add the first case study to the left side of the grid
+        // Add the second case study to the right side of the grid
+        // Append the grid to the container
+        {
+          const grid = document.createElement('div');
+          grid.classList.add('case-study-grid');
+          // add half-viewport class to the case study, since this is the
+          // first case study in the grid
+          caseStudyView.classList.add('half-viewport');
+          grid.appendChild(clone);
+          container.appendChild(grid);
+        }
+
+      }
+
   });
 });

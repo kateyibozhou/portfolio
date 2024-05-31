@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 path: './images/dash.png',
                 alt_text: 'User renewal banner page: before and after.'
             },
-            summary: 'Global renewal revenue increased by 83%'
+            summary: 'Global renewal revenue increased by 83%',
+            full_viewport: false
         },
         {
             title: 'Development Bank of Singapore Information Architecture',
@@ -21,7 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 path: './images/dash.png',
                 alt_text: 'Full page view of The Development Bank of Singapore (DBS) website.'
             },
-            summary: 'Spearheaded the development of a user-centric Information Architecture for Treasury & Markets content, resulting in significant improvements in user engagement, navigation efficiency, and new business opportunities'
+            summary: 'Spearheaded the development of a user-centric Information Architecture for Treasury & Markets content, resulting in significant improvements in user engagement, navigation efficiency, and new business opportunities',
+            full_viewport: false
         },
         {
             title: 'Phillips B2B GTM Launch design for TH and ANZ markets',
@@ -32,7 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 path: './images/dash.png',
                 alt_text: 'A sample launch campaign delivery asset.'
             },
-            summary: 'Delivered localised digital and physical campaign assets for both markets.'
+            summary: 'Delivered localised digital and physical campaign assets for both markets.',
+            full_viewport: false
         },
         {
             title: 'ExpressVPN Mobile Conversion Optimisation',
@@ -43,7 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 path: './images/dash.png',
                 alt_text: 'ExpressVPN plan renewal view on mobile'
             },
-            summary: 'Design shipped globally, resulted in 18% boost in AOV, multi-million revenue boost'
+            summary: 'Design shipped globally, resulted in 18% boost in AOV, multi-million revenue boost',
+            full_viewport: false
         },
         {
             title: 'Localisation for Shell APAC',
@@ -54,7 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 path: './images/dash.png',
                 alt_text: 'Different views of Shell App on mobile'
             },
-            summary: 'Design shipped globally, 23% increase in user adoption rates, 17% uplift in customer lifetime value'
+            summary: 'Design shipped globally, 23% increase in user adoption rates, 17% uplift in customer lifetime value',
+            full_viewport: false
         },
         {
             title: 'Localisation for Shell Malaysia',
@@ -65,7 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 path: './images/dash.png',
                 alt_text: 'Samples views of Malaysia App on mobile'
             },
-            summary: 'Design shipped across Malaysia'
+            summary: 'Design shipped across Malaysia',
+            full_viewport: false
         },
         {
             title: 'ExpressVPN B2B Enterprise Dashboard',
@@ -76,7 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 path: './images/dash.png',
                 alt_text: 'Current ExpressVPN dashboard'
             },
-            summary: 'Design shipped globally, 95% increase in customer satisfaction rate, 10 new multi-million dollar client contracts signed'
+            summary: 'Design shipped globally, 95% increase in customer satisfaction rate, 10 new multi-million dollar client contracts signed',
+            full_viewport: false
         },
         {
             title: 'B2C launch of Phillips Vacuum Cleaner',
@@ -87,7 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 path: './images/dash.png',
                 alt_text: 'Sample assets of the launch campaign'
             },
-            summary: 'Shipped in 2021'
+            summary: 'Shipped in 2021',
+            full_viewport: false
         },
         {
             title: 'Xiamen Hospital Communications Design',
@@ -98,7 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 path: './images/dash.png',
                 alt_text: 'Brand communication strategy planning design draft'
             },
-            summary: 'Design identify I created is adopted by hospital. Identity is resulted in boost in patient experience metrics'
+            summary: 'Design identify I created is adopted by hospital. Identity is resulted in boost in patient experience metrics',
+            full_viewport: false
         },
         {
             title: 'Rejoice branding and packaging for GC and APAC',
@@ -109,7 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 path: './images/dash.png',
                 alt_text: 'Rejoice shampoo bottle packaging designs which shipped'
             },
-            summary: 'Design shipped across GC and APAC, resulted in consumer visibility metrics and revenue'
+            summary: 'Design shipped across GC and APAC, resulted in consumer visibility metrics and revenue',
+            full_viewport: false
         },
         {
             title: 'Sephora Campaign Management and Optimisation',
@@ -120,7 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 path: './images/dash.png',
                 alt_text: 'Sample campaign assets'
             },
-            summary: 'Streamlined campaign resulted in boost in ROI, consumer engagement, and reduction in campaign launch delays'
+            summary: 'Streamlined campaign resulted in boost in ROI, consumer engagement, and reduction in campaign launch delays',
+            full_viewport: false
         },
         {
             title: 'SK-II Festive 2016',
@@ -131,7 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 path: './images/dash.png',
                 alt_text: ''
             },
-            summary: 'Boosted consumer engagement and revenue, reduction in production costs and time-to-market'
+            summary: 'Boosted consumer engagement and revenue, reduction in production costs and time-to-market',
+            full_viewport: false
         },
         {
             title: '',
@@ -142,7 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 path: './images/dash.png',
                 alt_text: ''
             },
-            summary: ''
+            summary: '',
+            full_viewport: false
         },
         {
             title: '',
@@ -153,13 +166,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 path: './images/dash.png',
                 alt_text: ''
             },
-            summary: ''
+            summary: '',
+            full_viewport: false
         },
     ];
     const container = document.getElementById('case-studies-container');
     const template = document.getElementById('case-study-template');
     caseStudies.forEach((study, index) => {
+        var _a;
         const clone = document.importNode(template.content, true);
+        const caseStudyView = clone.querySelector('.case-study-view');
         // (clone.querySelector('.case-study-number') as HTMLElement).textContent = `${index + 1}/${caseStudies.length}`;
         clone.querySelector('.case-study-title').textContent = study.title;
         clone.querySelector('.case-study-year').textContent = study.year;
@@ -172,6 +188,37 @@ document.addEventListener('DOMContentLoaded', () => {
         links.forEach(link => {
             link.href = study.local_path;
         });
-        container.appendChild(clone);
+        // for case studies with full viewport, add the class 'full-viewport' to the case study
+        if (study.full_viewport) {
+            caseStudyView.classList.add('full-viewport');
+            container.appendChild(clone);
+        }
+        else {
+            // this this case-study-view will either start a new half-viewport (on the left side)
+            // or be added to the existing half-viewport on the right side
+            // if the last child of the container is a half-viewport, add this case study to the right side
+            // How do we detect that? We can check if the last grid has only one child
+            // How do we access the last grid? check for class case-study-grid and its child count
+            if (((_a = container.lastElementChild) === null || _a === void 0 ? void 0 : _a.classList.contains('case-study-grid')) && container.lastElementChild.childElementCount === 1) {
+                // add this case study to the right side
+                // add half-viewport class to the case-study-view
+                caseStudyView.classList.add('half-viewport');
+                container.lastElementChild.appendChild(clone);
+            }
+            else 
+            // Create a div with class 'case-study-grid' to wrap the two case studies
+            // Add the first case study to the left side of the grid
+            // Add the second case study to the right side of the grid
+            // Append the grid to the container
+            {
+                const grid = document.createElement('div');
+                grid.classList.add('case-study-grid');
+                // add half-viewport class to the case study, since this is the
+                // first case study in the grid
+                caseStudyView.classList.add('half-viewport');
+                grid.appendChild(clone);
+                container.appendChild(grid);
+            }
+        }
     });
 });
