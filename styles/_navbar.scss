@@ -33,21 +33,16 @@ a {
   color: inherit;
 }
 
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 button {
   border: none;
   background-color: transparent;
   cursor: pointer;
   color: inherit;
-}
-
-.icon {
-  padding: 0.5rem;
-  background-color: var(--light-grey);
-  border-radius: 10px;
-}
-
-.logo {
-  margin-right: 1.5rem;
 }
 
 #nav-menu {
@@ -101,9 +96,7 @@ button {
 
 .nav-start,
 .nav-end,
-.menu-bar,
-.right-container,
-.right-container .search {
+.menu-bar {
   display: flex;
   align-items: center;
 }
@@ -156,40 +149,6 @@ button {
 .dropdown-link p {
   font-size: 0.8rem;
   color: var(--medium-grey);
-}
-
-.right-container {
-  display: flex;
-  align-items: center;
-  column-gap: 1rem;
-}
-
-.right-container .search {
-  position: relative;
-}
-
-.right-container img {
-  border-radius: 50%;
-}
-
-.search input {
-  background-color: var(--ash);
-  border: none;
-  border-radius: 6px;
-  padding: 0.7rem;
-  padding-left: 2.4rem;
-  font-size: 16px;
-  width: 100%;
-  border: var(--border);
-}
-
-.search .bx-search {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  font-size: 1.3rem;
-  transform: translateY(-50%);
-  opacity: 0.6;
 }
 
 #hamburger {

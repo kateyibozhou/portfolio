@@ -8,9 +8,9 @@
   <link rel="icon" type="image/x-icon" href="assets/site/favicon.png">
   <link rel="stylesheet" href="dist/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet"> -->
   <script src="dist/nav.js" defer></script>
   <style>
     html {
@@ -23,8 +23,10 @@
   <header id="nav-menu" aria-label="navigation bar">
     <div class="container">
       <div class="nav-start">
-        <a class="logo" href="index.html"> Home
+        <a class="logo" href="index.html"> Welcome&excl;
         </a>
+      </div>
+      <div class="nav-end">
         <nav class="menu">
           <ul class="menu-bar">
             <li>
@@ -66,7 +68,6 @@
         </nav>
       </div>
   
-      <div class="nav-end">
         <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="4" width="24" height="2" fill="currentColor"/>
@@ -77,7 +78,57 @@
       </div>
     </div>
   </header>
-  
+
+  <section class="full-viewport" data-aos="zoom-in">
+    <div class="landing-view">
+      <div class="landing-text" data-aos="fade-right">
+        <h2>Hi, I'm Yibo</h2>
+        <h1>I&apos;ve been working at the intersection of Product, UX, Service Design, and Conversion Design for 12 years.</h1>
+      </div>
+      <img src="assets/index-page/landing.png" alt="Landing page illustration by Yibo" data-aos="fade">
+    </div>
+  </section>
+
+  <section class="full-viewport" data-aos="fade-up">
+    <div class="steps-container">
+      <div class="vertical-text">
+        My Skills
+      </div>
+      <div class="step skill-service">
+          <div class="step-title">Service Design</div>
+          <hr>
+          <div class="step-description">Fill in the brief as detailed as possible. And the result will amaze you</div>
+      </div>
+      <div class="step skill-cro">
+          <div class="step-title">Conversion, Retention, Optimisation</div>
+          <hr>
+          <div class="step-description">A lot of work to be done: competitive and visual analysis, target audience and market research</div>
+      </div>
+      <div class="step skill-ux">
+          <div class="step-title">UX</div>
+          <hr>
+          <div class="step-description">Designing the logical structure of the future website</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="full-viewport" data-aos="fade-up">
+    <div class="steps-container">
+      <div class="vertical-text">
+        My Approach
+      </div>
+      <div class="my-approach">
+      Advocating for end users is just as important as designing for business
+      needs.
+      <br>
+      <br>
+      I believe that adopting a user-centred approach in design is
+      critical in crafting a holistic brand experience to drive customer LTV for
+      the business.
+      </div>
+    </div>
+  </section>
+
   <section class="case-studies-container" id="case-studies-container">
     <!-- Template will be inserted here -->
   </section>

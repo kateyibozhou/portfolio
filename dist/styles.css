@@ -68,21 +68,16 @@ a {
   color: inherit;
 }
 
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
 button {
   border: none;
   background-color: transparent;
   cursor: pointer;
   color: inherit;
-}
-
-.icon {
-  padding: 0.5rem;
-  background-color: var(--light-grey);
-  border-radius: 10px;
-}
-
-.logo {
-  margin-right: 1.5rem;
 }
 
 #nav-menu {
@@ -136,9 +131,7 @@ button {
 
 .nav-start,
 .nav-end,
-.menu-bar,
-.right-container,
-.right-container .search {
+.menu-bar {
   display: flex;
   align-items: center;
 }
@@ -191,40 +184,6 @@ button {
 .dropdown-link p {
   font-size: 0.8rem;
   color: var(--medium-grey);
-}
-
-.right-container {
-  display: flex;
-  align-items: center;
-  column-gap: 1rem;
-}
-
-.right-container .search {
-  position: relative;
-}
-
-.right-container img {
-  border-radius: 50%;
-}
-
-.search input {
-  background-color: var(--ash);
-  border: none;
-  border-radius: 6px;
-  padding: 0.7rem;
-  padding-left: 2.4rem;
-  font-size: 16px;
-  width: 100%;
-  border: var(--border);
-}
-
-.search .bx-search {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  font-size: 1.3rem;
-  transform: translateY(-50%);
-  opacity: 0.6;
 }
 
 #hamburger {
@@ -337,11 +296,7 @@ body {
     max-width: 100%;
   }
 }
-h1, h2 {
-  font-family: "Playfair Display", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-}
-
-body {
+html, body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -377,13 +332,24 @@ h2 {
 .case-study-view {
   background: var(--light-grey);
   color: var(--dark-grey);
-  width: 100%;
+  width: 90%;
 }
 
 .case-study-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 4vw;
+}
+
+.curved-text {
+  font-size: 2em;
+  fill: var(--dark-grey);
+}
+
+svg {
+  width: 90%;
+  height: auto;
+  max-width: fit-content;
 }
 
 .case-study-header {
@@ -400,6 +366,38 @@ h2 {
   border-top: 1px solid var(--dark-grey);
   padding-top: 20px;
   margin-right: 20px;
+}
+
+.landing-view {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 4vw;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+}
+
+.landing-text {
+  grid-column: 1;
+  text-align: left;
+  overflow-wrap: break-word;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.landing-text h1 {
+  font-size: 3rem;
+}
+
+.landing-text h2 {
+  font-size: 2rem;
+}
+
+.landing-view img {
+  grid-column: 2;
+  width: 100%;
+  max-width: 100%;
 }
 
 .case-study-summary {
@@ -468,8 +466,8 @@ h2 {
   text-align: left;
   grid-template-columns: 1fr;
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 3rem;
+  padding-right: 3rem;
   margin-bottom: 0;
 }
 
@@ -502,6 +500,31 @@ h2 {
 }
 
 @media screen and (max-width: 768px) {
+  .landing-view {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+  }
+  .landing-text {
+    grid-row: 1;
+    text-align: left;
+    overflow-wrap: break-word;
+    padding: 4vw;
+  }
+  .landing-text h1 {
+    font-size: 2rem;
+  }
+  .landing-text h2 {
+    font-size: 1.5rem;
+  }
+  .landing-view img {
+    grid-row: 2;
+    width: 100%;
+    max-width: 100%;
+  }
   .case-study-header {
     display: grid;
     text-align: left;
@@ -512,6 +535,7 @@ h2 {
     margin-bottom: 0;
   }
   .case-study-year {
+    padding-left: 3rem;
     grid-row-start: 1;
     grid-column: 1;
   }
@@ -535,6 +559,57 @@ h2 {
     max-width: 100%;
   }
 }
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: repeat(3, 30vh);
+  gap: 2rem;
+  width: 80%;
+  text-align: right;
+}
+
+.step-title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.step-description {
+  font-size: 1.5rem;
+}
+
+.skill-service {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.skill-cro {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.skill-ux {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+.my-approach {
+  grid-column: 2;
+  grid-row: 1/span 3;
+  font-size: 4rem;
+  text-align: left;
+  justify-self: center;
+  align-self: center;
+}
+
+.vertical-text {
+  grid-row: 1/span 3;
+  grid-column: 1;
+  text-align: center;
+  writing-mode: sideways-lr;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
 .contact {
   background: #f3f3f3;
   color: #1e1e2f;
