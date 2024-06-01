@@ -59,7 +59,7 @@ h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: calc(8px + 1.5625vw);
   overflow: hidden;
 }
 
@@ -105,7 +105,7 @@ svg {
   grid-column: 1;
   font-size: 1.5rem;
   border-top: 1px solid var(--dark-grey);
-  padding-top: 20px;
+  padding-top: calc(8px + 1.5625vw);
   margin-right: 20px;
 }
 
@@ -123,8 +123,8 @@ svg {
   grid-column: 1;
   text-align: left;
   overflow-wrap: break-word;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-left: calc(8px + 1.5625vw);
+  padding-right: calc(8px + 1.5625vw);
 }
 
 .landing-text h1 {
@@ -189,7 +189,7 @@ svg {
   background-color: var(--primary-color);
   color: var(--white);
   text-align: center;
-  padding: 0.6rem 1.4rem;
+  padding: calc(8px + 1.5625vw);
   font-size: 1rem;
   font-weight: 500;
   border-radius: 5px;
@@ -213,8 +213,8 @@ svg {
   text-align: left;
   grid-template-columns: 1fr;
   width: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: calc(8px + 1.5625vw);
+  padding-right: calc(8px + 1.5625vw);
   margin-bottom: 0;
 }
 
@@ -261,7 +261,7 @@ svg {
     grid-row: 1;
     text-align: left;
     overflow-wrap: break-word;
-    padding: 4vw;
+    padding: calc(8px + 1.5625vw);
   }
 
   .landing-text h1 {
