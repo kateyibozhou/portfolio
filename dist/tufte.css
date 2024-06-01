@@ -6,7 +6,7 @@
 @font-face {
     font-family: "et-book";
     src: url("et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
-    src: url("et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+    src: url("et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"), url("et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"), url("et-book/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -15,7 +15,7 @@
 @font-face {
     font-family: "et-book";
     src: url("et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
-    src: url("et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+    src: url("et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"), url("et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"), url("et-book/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -24,7 +24,7 @@
 @font-face {
     font-family: "et-book";
     src: url("et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
-    src: url("et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+    src: url("et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"), url("et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"), url("et-book/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -33,7 +33,7 @@
 @font-face {
     font-family: "et-book-roman-old-style";
     src: url("et-book/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
-    src: url("et-book/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
+    src: url("et-book/et-book/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"), url("et-book/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"), url("et-book/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"), url("et-book/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -41,7 +41,8 @@
 
 /* Tufte CSS styles */
 html {
-    font-size: 15px;
+    font-size: calc(15px + 0.390625vw);
+    background-color: #fffff8;
 }
 
 body {
@@ -54,14 +55,6 @@ body {
     color: #111;
     max-width: 1400px;
     counter-reset: sidenote-counter;
-}
-
-/* Adds dark mode */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #151515;
-        color: #ddd;
-    }
 }
 
 h1 {
@@ -253,13 +246,6 @@ a:link, .tufte-underline, .hover-tufte-underline:hover {
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
     a:link, .tufte-underline, .hover-tufte-underline:hover {
         background-position-y: 87%, 87%, 87%;
-    }
-}
-
-/* Adds dark mode */
-@media (prefers-color-scheme: dark) {
-    a:link, .tufte-underline, .hover-tufte-underline:hover {
-        text-shadow: 0.03em 0 #151515, -0.03em 0 #151515, 0 0.03em #151515, 0 -0.03em #151515, 0.06em 0 #151515, -0.06em 0 #151515, 0.09em 0 #151515, -0.09em 0 #151515, 0.12em 0 #151515, -0.12em 0 #151515, 0.15em 0 #151515, -0.15em 0 #151515;
     }
 }
 
@@ -483,4 +469,218 @@ label.margin-toggle:not(.sidenote-number) {
     img {
         width: 100%;
     }
+}
+
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+
+#nav-menu {
+  border-bottom: var(--border);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 2rem;
+  height: 90px;
+  padding: calc(8px + 1.5625vw);
+}
+
+.menu {
+  position: relative;
+  background: var(--light-grey);
+}
+
+.menu-bar li:first-child .dropdown {
+  flex-direction: initial;
+  min-width: 480px;
+}
+
+.menu-bar li:first-child ul:nth-child(1) {
+  border-right: var(--border);
+}
+
+.menu-bar li:nth-child(n + 2) ul:nth-child(1) {
+  border-bottom: var(--border);
+}
+
+.menu-bar .dropdown-link-title {
+  font-weight: 600;
+}
+
+.menu-bar .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+  padding: calc(8px + 1.5625vw);
+  min-width: 60px;
+  margin: 0 0.6rem;
+}
+
+.menu-bar .nav-link:hover,
+.dropdown-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-start,
+.nav-end,
+.menu-bar {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  min-width: 230px;
+  background-color: var(--light-grey);
+  border-radius: 10px;
+  position: absolute;
+  top: 36px;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.97) translateX(-5px);
+  transition: 0.1s ease-in-out;
+  box-shadow: var(--shadow);
+}
+
+.dropdown.active {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1) translateX(5px);
+}
+
+.dropdown ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.15rem;
+}
+
+.dropdown-link {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-radius: 7px;
+  transition: 0.1s ease-in-out;
+}
+
+.dropdown-link p {
+  font-size: 0.8rem;
+  color: var(--medium-grey);
+}
+
+#hamburger {
+  display: none;
+  padding: 0.1rem;
+  margin-left: 1rem;
+  font-size: 1.9rem;
+}
+
+@media (max-width: 1100px) {
+  #hamburger {
+    display: block;
+  }
+
+  .container {
+    padding: 1.2rem;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 87px;
+    left: 0;
+    min-height: 100vh;
+    width: 100vw;
+  }
+
+  .menu-bar li:first-child ul:nth-child(1) {
+    border-right: none;
+    border-bottom: var(--border);
+  }
+
+  .dropdown {
+    display: none;
+    min-width: 100%;
+    border: none !important;
+    border-radius: 5px;
+    position: static;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .menu.show,
+  .dropdown.active {
+    display: block;
+  }
+
+  .dropdown ul {
+    padding-left: 0.3rem;
+  }
+
+  .menu-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 1rem;
+    padding: 1rem;
+  }
+
+  .menu-bar .nav-link {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .menu-bar li:first-child .dropdown {
+    min-width: 100%;
+  }
+
+  .menu-bar > li:not(:last-child) {
+    padding-bottom: 0.5rem;
+    border-bottom: var(--border);
+  }
+}
+
+@media (max-width: 600px) {
+  .right-container {
+    display: none;
+  }
 }
