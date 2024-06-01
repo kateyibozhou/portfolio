@@ -7,7 +7,7 @@
   <title>Yibo Zhou's Portfolio</title>
   <link rel="icon" type="image/x-icon" href="assets/site/favicon.png">
   <link rel="stylesheet" href="dist/styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
   <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
   <!-- <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet"> -->
@@ -79,7 +79,16 @@
     </div>
   </header>
 
-  <section class="full-viewport" data-aos="zoom-in">
+  <section class="parallax">
+    <div class="parallax-content">
+      <div class="text-card text-focus-in">
+        <h2>Hi, I'm Yibo</h2>
+        <h1>I've been working at the intersection of Product, UX, Service Design, and Conversion Design for 12 years.</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="full-viewport" data-aos="zoom-in">
     <div class="landing-view">
       <div class="landing-text" data-aos="fade-right">
         <h2>Hi, I'm Yibo</h2>
@@ -87,24 +96,24 @@
       </div>
       <img src="assets/index-page/landing.png" alt="Landing page illustration by Yibo" data-aos="fade">
     </div>
-  </section>
+  </section> -->
 
   <section class="full-viewport" data-aos="fade-up">
     <div class="steps-container">
       <div class="vertical-text">
         Specialization
       </div>
-      <div class="step skill-service">
+      <div class="skill-service">
           <div class="step-title">Service Design</div>
           <hr>
           <div class="step-description">Fill in the brief as detailed as possible. And the result will amaze you</div>
       </div>
-      <div class="step skill-cro">
+      <div class="skill-cro">
           <div class="step-title">Conversion, Retention, Optimisation</div>
           <hr>
           <div class="step-description">A lot of work to be done: competitive and visual analysis, target audience and market research</div>
       </div>
-      <div class="step skill-ux">
+      <div class="skill-ux">
           <div class="step-title">UX</div>
           <hr>
           <div class="step-description">Designing the logical structure of the future website</div>
@@ -112,19 +121,21 @@
     </div>
   </section>
 
-  <section class="full-viewport" data-aos="fade-up">
-    <div class="steps-container">
-      <div class="vertical-text">
-        My Approach
-      </div>
-      <div class="my-approach">
-      Advocating for end users is just as important as designing for business
-      needs.
-      <br>
-      <br>
-      I believe that adopting a user-centred approach in design is
-      critical in crafting a holistic brand experience to drive customer LTV for
-      the business.
+  <section class="parallax" data-aos="fade-up">
+    <div class="parallax-content">
+      <div class="text-card steps-container">
+        <div class="vertical-text">
+          Philosophy
+        </div>
+        <div class="my-approach" style="font-size:1.3rem;">
+        Advocating for end users is just as important as designing for business
+        needs.
+        <br>
+        <br>
+        I believe that adopting a user-centred approach in design is
+        critical in crafting a holistic brand experience to drive customer LTV for
+        the business.
+        </div>
       </div>
     </div>
   </section>
@@ -167,9 +178,9 @@
   </template>
 
   <script src="dist/main.js"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
-  </script>
+  </script> -->
 </body>
 </html>
