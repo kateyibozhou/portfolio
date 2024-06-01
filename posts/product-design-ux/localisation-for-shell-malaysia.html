@@ -18,14 +18,63 @@
 </head>
 <body>
 
-  <header id="navbar">
-    <nav class="tabs-container">
-      <a href="#navbar" class="tab">Home</a>
-      <a href="../../projects.html" class="tab">Projects</a>
-      <a href="../../index.html#about" class="tab">About</a>
-      <a href="../../assets/pdfs/resume-may-2024.pdf" class="tab">R&eacute;sum&eacute;</a>
-      <a href="../../index.html#contact" class="tab">Contact</a>
-    </nav>
+  <header id="nav-menu" aria-label="navigation bar">
+    <div class="container">
+      <div class="nav-start">
+        <a class="logo" href="index.html"> Welcome&excl;
+        </a>
+      </div>
+      <div class="nav-end">
+        <nav class="menu">
+          <ul class="menu-bar">
+            <li>
+              <button class="nav-link dropdown-btn" data-dropdown="dropdown2" aria-haspopup="true" aria-expanded="false" aria-label="discover">
+                Projects
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div id="dropdown2" class="dropdown">
+                <ul role="menu">
+                  <li>
+                    <span class="dropdown-link-title">Browse Categories</span>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="product-ux.html">Product &amp; UX Design</a>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="service.html">Service Design</a>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="branding.html">Branding &amp; Packaging</a>
+                  </li>
+                </ul>
+                <ul role="menu">
+                  <li>
+                    <span class="dropdown-link-title">Browse Everything&comma; Everywhere&comma; All At Once&excl;</span>
+                  </li>
+                  <li role="menuitem">
+                    <a class="dropdown-link" href="projects.html">Erm&comma; just browse Everything for now</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="assets/pdfs/resume-may-2024.pdf">R&eacute;sum&eacute;</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+        <button id="hamburger" aria-label="hamburger" aria-haspopup="true" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="4" width="24" height="2" fill="currentColor"/>
+            <rect y="11" width="24" height="2" fill="currentColor"/>
+            <rect y="18" width="24" height="2" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </div>
   </header>
   <article>
 
@@ -81,5 +130,6 @@
     </section>
 
   </article>
+  <script src="../../dist/nav.js"></script>
 </body>
 </html>
