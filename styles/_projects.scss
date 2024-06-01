@@ -3,7 +3,7 @@
   --navbar-height: 60px; /* Adjust this value if your navbar height changes */
   --dark-grey: #333333;
   --medium-grey: #636363;
-  --light-grey: pink;
+  --light-grey: lightgrey;
   --ash: #f4f4f4;
   --primary-color: #2b72fb;
   --white: white;
@@ -83,16 +83,6 @@ h2 {
   column-gap: 4vw;
 }
 
-.curved-text {
-  font-size: 2em;
-  fill: var(--dark-grey);
-}
-svg {
-  width: 90%;
-  height: auto;
-  max-width: fit-content;
-}
-
 .case-study-header {
   display: grid;
   grid-template-columns: 2fr 4fr 3fr;
@@ -107,38 +97,6 @@ svg {
   border-top: 1px solid var(--dark-grey);
   padding-top: calc(8px + 1.5625vw);
   margin-right: 20px;
-}
-
-.landing-view {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  column-gap: 4vw;
-  align-items: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
-}
-
-.landing-text {
-  grid-column: 1;
-  text-align: left;
-  overflow-wrap: break-word;
-  padding-left: calc(8px + 1.5625vw);
-  padding-right: calc(8px + 1.5625vw);
-}
-
-.landing-text h1 {
-  font-size: 3rem;
-}
-
-.landing-text h2 {
-  font-size: 2rem;
-}
-
-.landing-view img {
-  grid-column: 2;
-  width: 100%;
-  max-width: 100%;
 }
 
 // .case-study-tags {
@@ -184,29 +142,6 @@ svg {
   box-shadow: 20px 20px 20px var(--light-grey);
 }
 
-.btn {
-  display: block;
-  background-color: var(--primary-color);
-  color: var(--white);
-  text-align: center;
-  padding: calc(8px + 1.5625vw);
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 5px;
-  margin: 20px 20px;
-}
-
-.button {
-  background-color: var(--button-color);
-  color: var(--dark-grey);
-  border: none;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
 /* Desktop styles */
 .half-viewport .case-study-header {
   display: grid;
@@ -248,34 +183,10 @@ svg {
 
 @media screen and (max-width: 768px) {
 
-  .landing-view {
+  .case-study-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    align-items: center;
-  }
-
-  .landing-text {
-    grid-row: 1;
-    text-align: left;
-    overflow-wrap: break-word;
-    padding: calc(8px + 1.5625vw);
-  }
-
-  .landing-text h1 {
-    font-size: 2rem;
-  }
-
-  .landing-text h2 {
-    font-size: 1.5rem;
-  }
-
-  .landing-view img {
-    grid-row: 2;
-    width: 100%;
-    max-width: 100%;
+    grid-template-columns: 90cqw;
+    grid-template-rows: 1fr 1fr;
   }
 
   .case-study-header {
@@ -316,56 +227,4 @@ svg {
     width: 100%;
     max-width: 100%;
   }
-
-}
-
-.steps-container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: repeat(3, 30vh);
-  gap: 2rem;
-  width: 80%;
-  text-align: right;
-}
-
-.step-title {
-  font-size: 3rem;
-  font-weight: 600;
-}
-
-.step-description {
-  font-size: 1.5rem;
-}
-
-.skill-service {
-  grid-row: 1;
-  grid-column: 2;
-}
-
-.skill-cro {
-  grid-row: 2;
-  grid-column: 2;
-}
-
-.skill-ux {
-  grid-row: 3;
-  grid-column: 2;
-}
-
-.my-approach {
-  grid-column: 2;
-  grid-row: 1 / span 3;
-  font-size: 4rem;
-  text-align: left;
-  justify-self: center;
-  align-self: center;
-}
-
-.vertical-text {
-  grid-row: 1 / span 3;
-  grid-column: 1;
-  text-align: center;
-  writing-mode: sideways-lr;
-  font-size: 5rem;
-  font-weight: 600;
 }

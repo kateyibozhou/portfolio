@@ -1,0 +1,158 @@
+.landing-view {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 4vw;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+}
+
+.landing-text {
+  grid-column: 1;
+  text-align: left;
+  overflow-wrap: break-word;
+  padding-left: calc(8px + 1.5625vw);
+  padding-right: calc(8px + 1.5625vw);
+}
+
+.landing-text h1 {
+  font-size: 3rem;
+}
+
+.landing-text h2 {
+  font-size: 2rem;
+}
+
+.landing-view img {
+  grid-column: 2;
+  width: 100%;
+  max-width: 100%;
+}
+
+.btn {
+  display: block;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: calc(8px + 1.5625vw);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  margin: 20px 20px;
+}
+
+.parallax {
+  background-image: url('../assets/index-page/landing.png'); /* Path to your image */
+  background-attachment: fixed; /* Key for parallax */
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; /* Ensures image covers the entire area */
+  min-height: 100vh; /* Ensures section takes up full viewport height */
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.parallax-content {
+  /* Optional: Add padding for spacing around the card */
+  padding: 5cqw; 
+}
+
+.text-card {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* Add a subtle shadow */
+}
+
+.text-card h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.text-card h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: repeat(3, 33vh);
+  gap: 1cqw;
+  width: 90%;
+  text-align: right;
+}
+
+.step-title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.step-description {
+  font-size: 1.5rem;
+}
+
+.skill-service {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.skill-cro {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.skill-ux {
+  grid-row: 3;
+  grid-column: 2;
+}
+
+.my-approach {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  font-size: 3cqw;
+  text-align: left;
+  justify-self: center;
+  align-self: center;
+}
+
+.vertical-text {
+  grid-row: 1 / span 3;
+  grid-column: 1;
+  text-align: center;
+  writing-mode: sideways-lr;
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+ .landing-view {
+   display: grid;
+   grid-template-rows: 1fr 2fr;
+   grid-template-columns: 90vw;
+   height: 100vh;
+ }
+
+ .landing-text {
+   grid-row: 2;
+   grid-column: 1;
+   text-align: left;
+   overflow-wrap: break-word;
+ }
+
+ .landing-text h1 {
+   font-size: 2rem;
+ }
+
+ .landing-text h2 {
+   font-size: 1.5rem;
+ }
+
+ .landing-view img {
+   grid-row: 1;
+   grid-column: 1;
+ }
+}
+  
