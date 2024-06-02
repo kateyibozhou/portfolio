@@ -44,7 +44,7 @@ html, body {
   --navbar-height: 60px; /* Adjust this value if your navbar height changes */
   --dark-grey: #333333;
   --medium-grey: #636363;
-  --light-grey: pink;
+  --light-grey: lightgrey;
   --ash: #f4f4f4;
   --primary-color: #2b72fb;
   --white: white;
@@ -530,7 +530,7 @@ h2 {
 }
 
 .parallax {
-  background-image: url("../assets/index-page/landing.png"); /* Path to your image */
+  background-image: url("../assets/index-page/landing.svg"); /* Path to your image */
   background-attachment: fixed; /* Key for parallax */
   background-position: center;
   background-repeat: no-repeat;
@@ -554,46 +554,55 @@ h2 {
 }
 
 .text-card h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 8cqw;
 }
 
 .text-card h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-size: 5cqw;
+}
+
+.text-card h3 {
+  font-size: 3cqw;
 }
 
 .steps-container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: repeat(3, 30vh);
-  gap: 2rem;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: repeat(3, 33vh);
+  column-gap: 1cqw;
   width: 90%;
   text-align: right;
+  justify-items: start;
 }
 
 .step-title {
-  font-size: 3rem;
-  font-weight: 600;
+  font-size: 4cqw;
+  font-weight: bold;
 }
 
 .step-description {
-  font-size: 1.5rem;
+  font-size: 1.5cqw;
 }
 
 .skill-service {
   grid-row: 1;
   grid-column: 2;
+  align-self: center;
+  justify-self: end;
 }
 
 .skill-cro {
   grid-row: 2;
   grid-column: 2;
+  align-self: center;
+  justify-self: end;
 }
 
 .skill-ux {
   grid-row: 3;
   grid-column: 2;
+  align-self: center;
+  justify-self: end;
 }
 
 .my-approach {
@@ -610,11 +619,14 @@ h2 {
   grid-column: 1;
   text-align: center;
   writing-mode: sideways-lr;
-  font-size: 5rem;
+  font-size: 5cqw;
   font-weight: 600;
 }
 
 @media screen and (max-width: 768px) {
+  .text-card h3 {
+    font-size: 8cqw;
+  }
   .landing-view {
     display: grid;
     grid-template-rows: 1fr 2fr;
