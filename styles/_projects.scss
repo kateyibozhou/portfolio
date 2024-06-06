@@ -72,9 +72,14 @@ h2 {
 }
 
 .case-study-view {
+  border: 0.2cqw solid black;
   background: var(--light-grey);
   color: var(--dark-grey);
   width: 90%;
+  justify-items: stretch;
+  justify-content: stretch;
+  align-content: space-evenly;
+  border: 10px solid red;
 }
 
 .case-study-grid {
@@ -181,7 +186,7 @@ h2 {
   max-width: 100%;
 }
 
-@media screen and (max-width: 50em) {
+@media screen and (max-width: 70em) {
 
   .case-study-grid {
     display: grid;
