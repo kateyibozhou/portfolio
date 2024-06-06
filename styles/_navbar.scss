@@ -159,7 +159,7 @@ button {
   font-size: 1.9rem;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 50em) {
   #hamburger {
     display: block;
   }
@@ -232,7 +232,7 @@ button {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 50em) {
   .right-container {
     display: none;
   }

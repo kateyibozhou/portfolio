@@ -26,7 +26,7 @@ body {
   overflow-x: hidden;
   max-width: 100%;
 }
-@media (max-width: 979px) {
+@media (max-width: 50em) {
   body {
     padding-top: 0px;
     overflow-x: hidden;
@@ -181,7 +181,7 @@ h2 {
   max-width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 50em) {
 
   .case-study-grid {
     display: grid;
